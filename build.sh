@@ -16,13 +16,16 @@
 # You should have received a copy of the GNU General Public License
 # along with this program.  If not, see <http://www.gnu.org/licenses/>
 
-export sourcedir=~/android/lineage
-export outdir=~/android/lineage/out/target/product/oneplus3
+export sourcedir=~/android/vanir
+export outdir=~/android/vanir/out/target/product/oneplus3
+
+echo 3 | sudo tee /proc/sys/vm/drop_caches
+
 cd $sourcedir
 echo "Building update.zip"
 . build/envsetup.sh
 sleep 1
-lunch lineage_oneplus3-userdebug
+lunch vanir_oneplus3-userdebug
 make clobber
 sleep 1
 time make -j4 bacon

@@ -16,19 +16,18 @@
 # You should have received a copy of the GNU General Public License
 # along with this program.  If not, see <http://www.gnu.org/licenses/>
 
-export sourcedir=~/lineage
-export outdir=~/lineage/out/target/product/oneplus3
+export sourcedir=~/android/vanir
+export outdir=~/android/vanir/out/target/product/oneplus3
+
+echo 3 | sudo tee /proc/sys/vm/drop_caches
+
 cd $sourcedir
-rm -rf $outdir/*kernel*
-rm -rf $outdir/boot.img
-rm -rf $outdir/ramdisk.img
-rm -rf $outdir/*ramdisk*
-rm -rf $outdir/*boot*
+make clobber
 sleep 1
 echo "Building update.zip"
 . build/envsetup.sh
 sleep 1
-lunch lineage_oneplus3-userdebug
+lunch vanir_oneplus3-userdebug
 sleep 1
 time make -j4 bootimage
 echo "Build Compleated"
