@@ -16,8 +16,8 @@
 # You should have received a copy of the GNU General Public License
 # along with this program.  If not, see <http://www.gnu.org/licenses/>
 
-export sourcedir=~/android/vanir
-export outdir=~/android/vanir/out/target/product/oneplus3
+export sourcedir=~/android/los
+export outdir=~/android/los/out/target/product/oneplus3
 
 echo 3 | sudo tee /proc/sys/vm/drop_caches
 
@@ -27,7 +27,7 @@ sleep 1
 echo "Building update.zip"
 . build/envsetup.sh
 sleep 1
-lunch vanir_oneplus3-userdebug
+lunch lineage_oneplus3-userdebug
 sleep 1
 time make -j4 bootimage
 echo "Build Compleated"
