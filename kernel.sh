@@ -16,8 +16,8 @@
 # You should have received a copy of the GNU General Public License
 # along with this program.  If not, see <http://www.gnu.org/licenses/>
 
-export sourcedir=~/android/los
-export outdir=~/android/los/out/target/product/oneplus3
+export sourcedir=~/android/lineage
+export outdir=~/android/lineage/out/target/product/oneplus3
 
 echo 3 | sudo tee /proc/sys/vm/drop_caches
 

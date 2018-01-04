@@ -16,9 +16,9 @@
 # You should have received a copy of the GNU General Public License
 # along with this program.  If not, see <http://www.gnu.org/licenses/>
 
-export sourcedir=~/android/los
-export devicedir=~/android/los/device/oneplus/oneplus3
-export kerneldir=~/android/los/kernel/oneplus/msm8996
+export sourcedir=~/android/lineage
+export devicedir=~/android/lineage/device/oneplus/oneplus3
+export kerneldir=~/android/lineage/kernel/oneplus/msm8996
 export scriptdir=~/android/scripts
 
 cd $sourcedir
